@@ -14,6 +14,8 @@
 		679152411B4B96E900D4F43B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679152401B4B96E900D4F43B /* Images.xcassets */; };
 		679152441B4B96E900D4F43B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 679152421B4B96E900D4F43B /* LaunchScreen.xib */; };
 		679152501B4B96EA00D4F43B /* AsyncUdpSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6791524F1B4B96EA00D4F43B /* AsyncUdpSocketTests.m */; };
+		6791525C1B4B976200D4F43B /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6791525B1B4B976200D4F43B /* AsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6791525E1B4B98B700D4F43B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6791525D1B4B98B700D4F43B /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		679152491B4B96EA00D4F43B /* AsyncUdpSocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncUdpSocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6791524E1B4B96EA00D4F43B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6791524F1B4B96EA00D4F43B /* AsyncUdpSocketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocketTests.m; sourceTree = "<group>"; };
+		6791525A1B4B976200D4F43B /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		6791525B1B4B976200D4F43B /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		6791525D1B4B98B700D4F43B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6791525E1B4B98B700D4F43B /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 		679152271B4B96E900D4F43B = {
 			isa = PBXGroup;
 			children = (
+				6791525D1B4B98B700D4F43B /* CFNetwork.framework */,
 				679152321B4B96E900D4F43B /* AsyncUdpSocket */,
 				6791524C1B4B96EA00D4F43B /* AsyncUdpSocketTests */,
 				679152311B4B96E900D4F43B /* Products */,
@@ -81,6 +88,7 @@
 		679152321B4B96E900D4F43B /* AsyncUdpSocket */ = {
 			isa = PBXGroup;
 			children = (
+				679152591B4B974A00D4F43B /* AsyncUdpSocket */,
 				679152371B4B96E900D4F43B /* AppDelegate.h */,
 				679152381B4B96E900D4F43B /* AppDelegate.m */,
 				6791523A1B4B96E900D4F43B /* ViewController.h */,
@@ -117,6 +125,15 @@
 				6791524E1B4B96EA00D4F43B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		679152591B4B974A00D4F43B /* AsyncUdpSocket */ = {
+			isa = PBXGroup;
+			children = (
+				6791525A1B4B976200D4F43B /* AsyncUdpSocket.h */,
+				6791525B1B4B976200D4F43B /* AsyncUdpSocket.m */,
+			);
+			name = AsyncUdpSocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +239,7 @@
 				6791523C1B4B96E900D4F43B /* ViewController.m in Sources */,
 				679152391B4B96E900D4F43B /* AppDelegate.m in Sources */,
 				679152361B4B96E900D4F43B /* main.m in Sources */,
+				6791525C1B4B976200D4F43B /* AsyncUdpSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

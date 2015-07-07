@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "AsyncUdpSocket.h"
+
+@interface ViewController : UIViewController<
+                                            AsyncUdpSocketDelegate
+                                            >
 
 
 @end
