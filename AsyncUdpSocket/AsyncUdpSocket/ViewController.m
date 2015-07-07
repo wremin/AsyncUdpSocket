@@ -17,9 +17,6 @@
     // 接收
     AsyncUdpSocket *recvSocket;
     
-    // 接收
-    AsyncUdpSocket *recvSocket2;
-    
     // 发送
     AsyncUdpSocket *sendSocket;
 }
@@ -44,11 +41,6 @@
     // http, 80 1024--2^16
     // 知名端口 http 80
     [recvSocket bindToPort:0x1234 error:nil];
-    
-    
-    recvSocket2 = [[AsyncUdpSocket alloc] initWithDelegate:self];
-    [recvSocket2 bindToPort:0x1235 error:nil];
-    [recvSocket2 receiveWithTimeout:-1 tag:201];
     
     // 接收数据包 -1表示一直等接收
     // tag 200表示当前接收数据包
